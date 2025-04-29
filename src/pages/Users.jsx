@@ -10,7 +10,6 @@ import {
   TableHead,
   TableRow,
   Paper,
-  Select,
   MenuItem,
   CircularProgress,
 } from "@mui/material";
@@ -18,6 +17,7 @@ import { Container, Title, Pagination } from "@mantine/core";
 import "../App.css";
 import { fetchUsers, setAuthToken } from "../services/authService";
 import LoadingSpinner from "../components/LoadingSpinner";
+
 
 
 const Users = () => {
@@ -74,23 +74,6 @@ useEffect(() => {
         Users
       </Title>
 
-      <Select
-        value={userType}
-        onChange={(value) => {
-          setUserType(value);
-          setPage(1);
-        }}
-        displayEmpty
-        variant="outlined"
-        sx={{ mb: 2 }}
-        className="users-select"
-      >
-        <MenuItem value="all">All</MenuItem>
-        <MenuItem value="farmer">Farmer</MenuItem>
-        <MenuItem value="researcher">Agricultural Researcher</MenuItem>
-        <MenuItem value="expert">Expert</MenuItem>
-        <MenuItem value="admin">Admin</MenuItem>
-      </Select>
 
       <TableContainer component={Paper} className="users-table">
         <Table>

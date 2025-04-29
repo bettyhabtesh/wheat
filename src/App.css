@@ -13,6 +13,7 @@ body,
   width: 100%;
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .app-container {
@@ -114,7 +115,7 @@ body,
 
 /* Dashboard Title */
 .dashboard-title {
-  color: #2c3e50;
+  color: black;
   font-weight: 700;
   text-align: center;
   margin-bottom: 20px;
@@ -132,47 +133,62 @@ body,
 .stat-card {
   background: white;
   border-radius: 12px;
-  padding: 50px;
+  border-width: 2px;
+  border-color: gray;
+  border-style: solid;
+  padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.2s ease-in-out;
   width: calc(25% - 20px);
   height: 200px;
-  display: "flex";
-  flex-direction: "column";
-  justify-content: "space-between";
-  gap: 50xp;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
 }
 
-.stat-card:hover {
-  transform: translateY(-5px);
+.icon-background {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #90EE90; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 35px;
 }
+
 
 .stat-label {
   font-size: 14px;
-  text-transform: uppercase;
   font-weight: bold;
   color: #7f8c8d;
   margin-top: 10px;
 }
 
 .stat-value {
-  font-size: 22px;
+  font-size: 40px;
   font-weight: bold;
+  margin-top: 10px;
 }
+
 
 /* Charts Section */
 .charts-grid {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
 .chart-card {
   background: #f9f9f9;
   border-radius: 12px;
-  padding: 20px;
+  border-width: 2px;
+  border-color: gray;
+  border-style: solid;
+  padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 500px;
@@ -227,7 +243,7 @@ body,
 }
 
 .users-table th {
-  background: #007bff;
+  background: #90EE90;
   color: white;
   text-transform: uppercase;
   font-size: 14px;
@@ -272,7 +288,7 @@ body,
 }
 
 .approvals-table th {
-  background: #007bff;
+  background: #90EE90;
   color: white;
   text-transform: uppercase;
   font-size: 14px;
@@ -323,6 +339,7 @@ body,
   border-radius: 12px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  color: #4caf50;
 }
 
 /* Back Button */
@@ -330,14 +347,14 @@ body,
   display: flex;
   align-items: center;
   gap: 5px;
-  color: #007bff;
+  color: #90EE90;
   cursor: pointer;
   font-weight: bold;
   margin-bottom: 15px;
 }
 
 .back-button:hover {
-  color: #0056b3;
+  color:#90EE90;
 }
 
 /* Certificate Preview */

@@ -38,18 +38,18 @@ export function Sidebar() {
         </Group>
 
         {data.map((item) => (
-          <NavLink
-            to={item.link}
-            className={({ isActive }) =>
-              `${classes.link} ${isActive ? classes.active : ""}`
-            }
-            key={item.label}
-            onClick={() => setActive(item.label)}
-            style={{ textDecoration: "none", color: "white" }}
-          >
-            <item.icon className={classes.linkIcon} stroke={1.5} />
-            <span>{item.label}</span>
-          </NavLink>
+       <NavLink
+       to={item.link}
+       className={({ isActive }) =>
+         `${classes.link} ${isActive ? classes.active : ""}`
+       }
+       key={item.label}
+       onClick={() => setActive(item.label)}
+     >
+       <item.icon className={classes.linkIcon} stroke={1.5} />
+       <span>{item.label}</span>
+     </NavLink>
+     
         ))}
       </div>
 
@@ -59,12 +59,6 @@ export function Sidebar() {
         <button
           className={classes.link}
           onClick={handleLogout}
-          style={{
-            background: "none",
-            border: "none",
-            color: "white",
-            cursor: "pointer",
-          }}
         >
           <IconLogout className={classes.linkIcon} stroke={1.5} />
           <span>Logout</span>

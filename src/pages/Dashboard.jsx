@@ -42,7 +42,7 @@ const icons = {
 };
 
 // Colors for Pie Chart
-const COLORS = ["#4caf50", "#ff9800", "#2196f3"];
+const COLORS = ["#006400", "#90EE90", "#579357"]; 
 
 const Dashboard = () => {
   const [stats, setStats] = useState(null);
@@ -79,28 +79,29 @@ const Dashboard = () => {
     {
       label: "Total Users",
       stats: totalUsers,
-      color: "blue",
+      color: "#006400", 
       icon: "Total Users",
     },
     {
       label: "Farmers",
       stats: farmers,
-      color: "teal",
+      color: "#006400",
       icon: "Farmers",
     },
     {
       label: "Researchers",
       stats: researchers,
-      color: "yellow",
+      color: "#FFA500", 
       icon: "Researchers",
     },
     {
       label: "Experts",
       stats: experts,
-      color: "red",
+      color: "#1E90FF", 
       icon: "Experts",
     },
   ];
+  
 
   const userDistribution = [
     { name: "Farmers", value: farmers },
@@ -123,14 +124,20 @@ const Dashboard = () => {
           const IconComponent = icons[stat.icon];
           return (
             <Paper key={stat.label} withBorder radius="md" p="md" className="stat-card">
-              <Center>
-                <IconComponent size={40} stroke={2} color={stat.color} />
-              </Center>
-              <Text align="center" mt={10}>{stat.label}</Text>
-              <Text align="center" style={{ color: stat.color, fontSize: 32, fontWeight: "bold" }}>
-                {stat.stats}
-              </Text>
-            </Paper>
+  <div> <Center>
+    
+    <div className="icon-background">
+      <IconComponent size={24} stroke={2} color="#006400" />
+    </div>
+  </Center>
+  <Text align="center" className="stat-label">{stat.label}</Text>
+  <Text align="center" className="stat-value" style={{ color: "#006400" }}>
+    {stat.stats}
+  </Text>
+  </div>
+</Paper>
+
+          
           );
         })}
       </SimpleGrid>
@@ -167,7 +174,7 @@ const Dashboard = () => {
               <XAxis dataKey="name" />
               <YAxis />
               <Tooltip />
-              <Bar dataKey="count" fill="#8884d8" radius={[8, 8, 0, 0]} />
+              <Bar dataKey="count" fill="#006400" radius={[8, 8, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </Card>

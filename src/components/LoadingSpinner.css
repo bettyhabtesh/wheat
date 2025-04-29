@@ -9,7 +9,7 @@
   .dots-loader span {
     width: 24px; 
     height: 24px;
-    background-color: #1976d2; 
+    background-color: #90EE90; 
     border-radius: 50%;
     animation: bounce 0.9s infinite ease-in-out;
   }
