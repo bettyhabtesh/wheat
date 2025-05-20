@@ -106,3 +106,18 @@ export const rejectExpertRequest = async (id) => {
     throw error;
   }
 };
+
+export const fetchFeedbackList = async (filters = {}) => {
+  try {
+    const token = localStorage.getItem("token");
+    const response = await axios.get(`${BASE_URL}/feedback/list/`, {
+      headers: { Authorization: `Bearer ${token}` },
+      params: filters,
+    });
+    return response.data;
+  } 
+  catch (error) {
+    console.error("Failed to fetch feedback:", error.response?.data || error.message);
+    throw error;
+  }
+};

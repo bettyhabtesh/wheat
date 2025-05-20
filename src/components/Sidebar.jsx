@@ -8,6 +8,7 @@ import {
   IconDatabaseImport,
   IconReceipt2,
   IconLogout,
+  IconMessage2,
 } from "@tabler/icons-react";
 import { setAuthToken } from "../services/authService";
 import classes from "./Sidebar.module.css";
@@ -16,6 +17,7 @@ const data = [
   { link: "/dashboard", label: "Dashboard", icon: IconDatabaseImport },
   { link: "/users", label: "Users", icon: IconBellRinging },
   { link: "/approvals", label: "Approvals", icon: IconReceipt2 },
+  { link: "/feedback", label: "Feedback", icon: IconMessage2 },
 ];
 
 export function Sidebar() {

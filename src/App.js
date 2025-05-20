@@ -6,6 +6,7 @@ import Dashboard from "./pages/Dashboard";
 import Users from "./pages/Users";
 import Approvals from "./pages/Approval";
 import ViewCertificate from "./pages/ViewCertificate";
+import Feedback from "./pages/Feedback"
 import Sende from "./pages/Login"; 
 import { useState, useEffect } from "react";
 import "./App.css";
@@ -72,6 +73,10 @@ function App() {
               )
             }
           />
+          <Route
+  path="/feedback"
+  element={isLoggedIn ? <Feedback /> : <Navigate to="/login" replace />}
+/>
         </Routes>
       </div>
     </div>
