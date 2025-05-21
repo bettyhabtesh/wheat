@@ -206,7 +206,39 @@ body,
   }
 }
 
+.feedback-stars {
+  justify-content: center;
+  margin-left: 150px;
+  margin-top: 30px;
+}
 
+.feedback-stars svg {
+  width: 36px;
+  height: 36px;
+}
+
+.feedback-rating {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.feedback-button {
+  margin-top: 20px;
+  background-color: #006400;
+  color: white;
+  border-radius: 100px; 
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-left: 180px;
+}
+
+.feedback-button:hover {
+  background-color: #037103;
+}
 
 /* Container Styling */
 .users-container {

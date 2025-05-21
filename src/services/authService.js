@@ -61,6 +61,21 @@ export const fetchUserStats = async () => {
   }
 };
 
+export const fetchAverageRating = async () => {
+  try {
+    const token = localStorage.getItem("token");
+    const response = await axios.get(`${BASE_URL}/feedback/average-rating/`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.error("Failed to fetch average rating:", error.response?.data || error.message);
+    throw error;
+  }
+};
+
 // Fetch pending expert review requests
 export const fetchApprovalRequests = async () => {
   try {

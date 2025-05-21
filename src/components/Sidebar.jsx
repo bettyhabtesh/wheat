@@ -1,6 +1,6 @@
 /** @format */
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Group, Divider, Text } from "@mantine/core";
 import { NavLink, useNavigate } from "react-router-dom";
 import {

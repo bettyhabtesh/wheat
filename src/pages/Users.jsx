@@ -1,7 +1,6 @@
 /** @format */
 
 import { useState, useEffect } from "react";
-import axios from "axios";
 import {
   Table,
   TableBody,
@@ -10,8 +9,7 @@ import {
   TableHead,
   TableRow,
   Paper,
-  MenuItem,
-  CircularProgress,
+
 } from "@mui/material";
 import { Container, Title, Pagination } from "@mantine/core";
 import "../App.css";
