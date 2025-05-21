@@ -112,6 +112,25 @@ body,
   padding: 20px;
   font-family: "Inter", sans-serif;
 }
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-container input {
+  width: 100%;
+  padding-right: 40px; /* space for the icon */
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #666;
+  font-size: 1.2rem;
+}
+
 
 /* Dashboard Title */
 .dashboard-title {

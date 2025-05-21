@@ -6,7 +6,7 @@ import "../App.css";
 import backgroundImage from "../Assets/sende.png";
 import { login, setAuthToken } from "../services/authService";
 import LoadingSpinner from "../components/LoadingSpinner";
-
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 
 function Sende({ onLogin }) {
   const [email, setEmail] = useState("");
@@ -14,6 +14,8 @@ function Sende({ onLogin }) {
   const [error, setError] = useState(""); // For displaying errors
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+
 
 
   const handleLogin = async (e) => {
@@ -33,7 +35,7 @@ function Sende({ onLogin }) {
       const errorMsg =
         error.response?.data?.detail ||
         error.response?.data?.message ||
-        "Login failed. Please try again.";
+        "Incorrect Username or Password. Please try again.";
       setError(errorMsg);
     } finally {
       setLoading(false); // stop loading
@@ -65,13 +67,23 @@ function Sende({ onLogin }) {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
+       <div className="password-container">
+  <input
+    type={showPassword ? "text" : "password"}
+    placeholder="Password"
+    value={password}
+    onChange={(e) => setPassword(e.target.value)}
+    required
+  />
+  <span
+  className="toggle-password"
+  onClick={() => setShowPassword((prev) => !prev)}
+>
+  {showPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
+</span>
+
+</div>
+
         <button type="submit">Login</button>
       </form>
     </div>
